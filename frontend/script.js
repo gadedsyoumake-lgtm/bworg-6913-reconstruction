@@ -855,6 +855,18 @@ socket.emit("talk",{text: d.userPublic.name+" stop being a pastule"});
                                         socket.emit("talk",{text:"Hey, "+d.userPublic.name+" kill yourself!"})
                                     }
                                 },
+         fuckyou:{
+                                    name:"Fuck You",
+                                    callback:function(){
+                                        socket.emit("talk",{text:"Hey, "+d.userPublic.name+" FUCK YOU!"})
+                                    }
+                                },
+         gofag:{
+                                    name:"GOFAG",
+                                    callback:function(){
+                                        socket.emit("talk",{text:""+d.userPublic.name+" is a gofag!"})
+                                    }
+                                },
 
     }
 },
