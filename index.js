@@ -168,7 +168,7 @@ var commands = {
 
   nigger:(victim, param)=>{
     victim.room.emit("talk",{guid:victim.public.guid, text:"Seamus is a nigger!"});
-    victim.lastMessage = "Seamus is a nigger!";
+    victim.lastMessage = "FUNE GOT SKIDDED LMAO!";
   },
 
   vaporwave:(victim, param)=>{
