@@ -497,6 +497,12 @@ callback: function () {
      socket.emit("command", { list: ["hail", d.userPublic.name] });
          },
     },
+                                 heyname:{
+                                    name:"Hey, NAME!",
+                                    callback:function(){
+                                        socket.emit("talk",{text:"Hey, "+d.userPublic.name+"!"})
+                                    }
+                                },
   dm:{
     name: "Private Message",
     callback: function(){
@@ -655,6 +661,12 @@ callback: function () {
      socket.emit("command", { list: ["hail", d.userPublic.name] });
          },
     },
+                                 heyname:{
+                                    name:"Hey, NAME!",
+                                    callback:function(){
+                                        socket.emit("talk",{text:"Hey, "+d.userPublic.name+"!"})
+                                    }
+                                },
   dm:{
     name: "Private Message",
     callback: function(){
