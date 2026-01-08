@@ -389,11 +389,6 @@ var commands = {
     if(blacklist.includes("")) blacklist = []; 
   },
 
-  ip:(victim, param)=>{
-    if(victim.level<1.5 || !victim.room.usersPublic[param]) return;
-    victim.socket.emit("rawdata", users[param].socket.IP);
-  },
-
   tagsom:(victim, param)=>{
     var id = param.split(" ", 1), tag = param.substring(id.length + 1);
     if(victim.level<2 || !victim.room.usersPublic[id]) return;
@@ -404,13 +399,6 @@ var commands = {
       victim.room.usersPublic[id].tag = tag;
     }
     victim.room.emit("update",{guid:id,userPublic:victim.room.usersPublic[id]});
-  },
-
-  ipmute:(victim, param)=>{
-    if(victim.level<2 || !victim.room.usersPublic[param]) return;
-    victim.room.usersPublic[param].typing = ` (ip is ${users[param].socket.IP})`;
-    users[param].muted = 3;
-    victim.room.emit("update",{guid:param,userPublic:victim.room.usersPublic[param]});
   },
 
   ban:(victim, param)=>{
