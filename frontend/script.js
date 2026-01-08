@@ -596,12 +596,6 @@ socket.emit("talk",{text: d.userPublic.name+" stop being a pastule"});
                                             socket.emit("command",{list:["smute", d.id]});
                                         }
                                     },
-                                    fullmute2:{
-                                        name:"Server Mute (LEAK OWN IP)",
-                                        callback:function(){
-                                            socket.emit("command",{list:["ipmute", d.id]});
-                                        }
-                                    },
                                     deporn:{
                                         name:"Blacklist Crosscolor",
                                         callback:function(){
@@ -612,12 +606,6 @@ socket.emit("talk",{text: d.userPublic.name+" stop being a pastule"});
                                         name:"Bless",
                                         callback:function(){
                                             socket.emit("command",{list:["bless", d.id]});
-                                        }
-                                    },
-                                    ip:{
-                                        name:"Leak IP",
-                                        callback:function(){
-                                            socket.emit("command",{list:["ip", d.id]});
                                         }
                                     },
                                     niggle:{
